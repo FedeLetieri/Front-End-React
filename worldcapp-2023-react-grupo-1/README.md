@@ -1,4 +1,4 @@
-![build](https://github.com/algo3-unsam/worldcapp-2023-react-grupo-1/actions/workflows/build.yml/badge.svg)
+
 ![Coverage](./badges/worldcapp-2023-react-grupo-1/coverage.svg)
 
 # TP WorldCApp - Grupo 1
