@@ -1,0 +1,128 @@
+@import url('../../assets/css/generic/animations.css');
+@import url('../../assets/css/generic/decorations.css');
+
+.container__cardChica {
+  padding: 0.5rem;
+  border-radius: 1.7em;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+  font-weight: 800;
+}
+.cardChica-title-container,
+.header_cardChica,
+.tag-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.cardChica-title-container {
+  gap: 1rem;
+}
+
+.header_cardChica {
+  justify-content: space-between;
+  padding: 0.5em 2em;
+  align-items: center;
+}
+
+.header_cardChica .modify__btn {
+  right: 0rem !important;
+  top: -2rem;
+  font-size: 2rem !important;
+}
+
+.header_cardChica .modify__options{
+  left: 0.3rem !important;
+  top: 4.5rem;
+  z-index: 999 !important;
+  pointer-events: all !important;
+}
+
+.tags-container-cardChica {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+  font-size: 1.2em;
+}
+
+.tag-info {
+  justify-content: center;
+}
+
+.tag-info * {
+  margin-bottom: 0.2rem !important;
+}
+
+.tag-icon,
+.cardChica-title,
+.cardChica-bottomTitle,
+.tag-text {
+  color: var(--color-blanco);
+  opacity: 0.8;
+}
+
+.tag-icon {
+  font-size: 1.2em;
+}
+
+.cardChica-icon {
+  font-size: 2.3em;
+  margin: 0.4em 0 0.2em 0;
+  width: 3rem;
+}
+
+.cardChica-icon.primary-icon {
+  font-size: 3.2em;
+}
+
+.cardChica-title {
+  font-size: 2.3em;
+  width: 50%;
+}
+
+.container-bottomElements {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.cardChica-bottomTitle {
+  font-size: 2.5em;
+}
+
+.cardChica-button {
+  background: none;
+  border: none;
+}
+
+.tag-text {
+  font-size: 1.2em;
+  margin: 0 0.5em;
+}
+
+.pack {
+  max-width: 32rem;
+  border: 0.1rem solid var(--color-primario);
+  padding: 0.5rem;
+  cursor: pointer;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  background-color: var(--color-fondo-primario);
+}
+
+.tag-divider {
+  width: 1px;
+  height: 50%;
+  background-color: var(--color-blanco);
+  margin: 0 1em;
+  opacity: 0.8;
+}
+
+.separador {
+  width: 100%;
+  height: 1px;
+  background-color: #555;
+}

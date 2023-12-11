@@ -1,0 +1,36 @@
+.CardChica-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.CardChica-container > * {
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+
+.container-BarraBusqueda {
+  margin-bottom: 3em;
+}
+
+.popUp-container > * {
+  z-index: 9;
+}
+
+.container-label-assessment{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  align-items: start;
+}
+
+.assessment_label{
+  text-align-last: initial;
+  color: white;
+}
+
+
+@media screen and (min-width: 700px) {
+  .container-label-assessment{
+    align-items: center;
+  }
+}

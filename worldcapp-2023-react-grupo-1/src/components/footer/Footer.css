@@ -1,0 +1,28 @@
+.footer {
+    justify-content: center;
+    background: var(--gradiente);
+    padding: 1.5em;
+    display: flex;
+    height: 6em;
+    position: absolute;
+    bottom: calc(100vh- 100%);
+    left: 0;
+    width: 100%;
+  }
+
+.footer * {
+    color: white;
+}
+  
+.footer_icon {
+    margin-right: 0.5em;
+}
+
+.footer h1 {
+    font-weight: 600;
+    margin-bottom: 0 !important;
+}
+  
+.footer_year {
+    font-weight: 100;
+}

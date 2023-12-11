@@ -1,0 +1,78 @@
+@keyframes floating {
+    0%{transform: translateY(-0.2rem);}
+    50%{transform: translateY(0.2rem);}
+    100%{transform: translateY(-0.2rem);}
+}
+
+@keyframes icon-rotation {
+    0%{transform: rotate(10deg);}
+    25%{transform: rotate(-20deg);}
+    50%{transform: rotate(15deg);}
+    75%{transform: rotate(-10deg);}
+    100%{transform: rotate(5deg);}
+}
+
+@keyframes twinkling-text {
+    0%{ opacity: 0; }
+    100%{ opacity: 1;}
+}
+
+@keyframes spinning-right {
+    25%{transform: translate(3.3rem, -1.3rem)}
+    50%{transform: translate(5.5rem, 0)}
+    75%{transform: translate(3.3rem, 1.3rem)}
+    100%{transform: translate(0, 0)}
+}
+
+@keyframes spinning-left {
+    25%{transform: translate(-3.3rem, 1.3rem)}
+    50%{transform: translate(-5.5rem, 0)}
+    75%{transform: translate(-3.3rem, -1.3rem)}
+    100%{transform: translate(0, 0)}
+}
+
+@keyframes sliding-br {
+    25%{transform: translate(100%, 100%)}
+    50%{transform: translate(200%, 200%)}
+    75%{transform: translate(100%, 100%)}
+}
+
+@keyframes sliding-tr {
+    25%{transform: translate(-100%, -100%)}
+    50%{transform: translate(-200%, -200%)}
+    75%{transform: translate(-100%, -100%)}
+}
+
+@keyframes sliding-bl {
+    25%{transform: translate(-100%, 100%)}
+    50%{transform: translate(-200%, 200%)}
+    75%{transform: translate(-100%, 100%)}
+}
+
+@keyframes sliding-tl {
+    25%{transform: translate(100%, -100%)}
+    50%{transform: translate(200%, -200%)}
+    75%{transform: translate(100%, -100%)}
+}
+
+@keyframes color-changing {
+    0%{background-color: var(--color-primario);}
+    25%{background-color: color-mix(var(--color-primario), var(--color-primario-oscuro));}
+    50%{background-color: var(--color-primario-oscuro);}
+    75%{background-color: color-mix(var(--color-primario), var(--color-primario-oscuro));}
+    100%{background-color: var(--color-primario);}
+}
+
+@keyframes color-changing-reverse {
+    0%{background-color: var(--color-primario-oscuro);}
+    25%{background-color: color-mix(var(--color-primario), var(--color-primario-oscuro));}
+    50%{background-color: var(--color-primario);}
+    75%{background-color: color-mix(var(--color-primario), var(--color-primario-oscuro));}
+    100%{background-color: var(--color-primario-oscuro);}
+}
+
+@keyframes full-rotation{
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+    100% { transform: rotate(720deg); }
+}

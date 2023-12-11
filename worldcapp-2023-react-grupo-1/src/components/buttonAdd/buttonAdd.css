@@ -1,0 +1,17 @@
+.plus-button__container {
+  color: #FFFF;
+  font-size: 1.8rem;
+  background-color: var(--color-primario-oscuro);
+  box-shadow: 0 0 0.5rem 0.1rem  var(--color-fondo-terciario);
+  justify-self: center;
+  border-radius: 5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  bottom: 6rem;
+  right: 1rem;
+  z-index: 1;
+}

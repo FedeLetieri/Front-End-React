@@ -1,0 +1,16 @@
+.center--flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flag img {
+  height: 1.95rem;
+  width: auto;
+}

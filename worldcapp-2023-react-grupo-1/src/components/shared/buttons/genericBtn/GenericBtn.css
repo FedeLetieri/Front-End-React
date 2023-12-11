@@ -1,0 +1,13 @@
+.generic-button{
+    font-size: 2rem;
+    background-color: var(--color-primario);
+    border: none;
+}
+
+.btn-edit > *{
+    color: var(--color-primario-oscuro);
+}
+
+.btn-remove > *{
+    color: var(--warning);
+}

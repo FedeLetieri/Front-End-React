@@ -1,0 +1,21 @@
+.no-elements-message-p {
+    color: var(--color-blanco);
+    opacity: 0.8;
+    text-align: center;
+    max-width: 30ch; 
+    overflow-wrap: break-word; 
+    border-radius: 1rem;
+    border: 0.2rem solid var(--color-primario);
+    outline: 0.2rem solid var(--color-primario);
+    outline-offset: 0.5rem;
+    padding: 2rem;
+}
+
+.no-elements-message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+

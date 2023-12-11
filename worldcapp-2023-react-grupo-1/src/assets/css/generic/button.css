@@ -1,0 +1,187 @@
+.buttons-container {
+  display: flex;
+  flex-direction: row !important;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem;
+  margin-top: 3.5rem;
+  max-width: 30rem;
+}
+
+.primary-button,
+.secondary-button {
+  width: 11.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1em;
+  font-size: 1.8rem;
+  height: 6.5rem;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  color: var(--color-blanco);
+  background: var(--color-primario);
+  box-shadow: 0 0 10px var(--color-primario);
+}
+.secondary-button:hover {
+  background: var(--color-secundario);
+  box-shadow: 0 0 10px var(--color-secundario);
+}
+
+/* Primary Button */
+.primary-button {
+  color: var(--color-primario);
+  box-shadow: 0 0 20px var(--color-primario);
+  border: none;
+}
+
+.primary-button i::before,
+.primary-button i::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: var(--color-primario);
+  transform: translateX(-50%) skewX(325deg);
+  transition: 0.5s;
+}
+.primary-button i::before {
+  top: 0;
+  left: 80%;
+}
+
+.primary-button:hover i::before {
+  width: 40px;
+  left: 20%;
+}
+
+.primary-button i::after {
+  bottom: 0;
+  left: 20%;
+}
+
+.primary-button:hover i::after {
+  width: 40px;
+  left: 80%;
+}
+
+/* Secondary Button */
+
+.secondary-button {
+  color: var(--color-blanco);
+  background-color: transparent;
+  border: 1px solid var(--color-blanco);
+}
+
+/* buttons Container Space (Para darle lugar y que los botones no se empujen entre sí)*/
+
+.button--spacing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .button--spacing {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@media (max-width: 769px) {
+  .button--spacing * {
+    font-size: 1.3em;
+  }
+}
+
+/* BOTÓN AGREGAR MÁS FIGURITAS */
+
+.plus-button__container {
+  color: #FFFF;
+  font-size: 1.8rem;
+  background-color: var(--color-primario-oscuro);
+  box-shadow: 0 0 0.5rem 0.1rem  var(--color-fondo-terciario);
+  justify-self: center;
+  border-radius: 5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 6rem;
+  height: 6rem;
+}
+
+.plus-button__container:hover {
+  background-color: var(--color-primario);
+}
+
+/* BOTÓN EDITAR, BASURA Y CANCEL*/ 
+
+.card {
+  position: relative;
+}
+
+.icon-edit-container,
+.icon-thrash-container,
+.number-container {
+  border: none;
+  cursor: pointer;
+  color: var(--color-primario);
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.icon-thrash-container {
+  background-color: var(--color-secundario);
+  height: 4rem;
+  font-size: 2.3rem;
+}
+
+.number-container {
+  background-color: #e28743;
+  height: 3rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 100;
+}
+
+.icon-edit-container {
+  background-color: var(--color-primario-oscuro);
+  height: 3rem;
+  font-size: 1.8rem;
+}
+
+.icon-cancel-container {
+  background-color: var(--color-secundario);
+  height: 3rem;
+  font-size: 1.8rem;
+}
+.icon-cancel-container i,
+.icon-edit-container i,
+.icon-thrash-container i {
+  color: var(--color-blanco);
+}
+.icon-cancel-container:hover,
+.icon-edit-container:hover,
+.icon-thrash-container:hover {
+  animation: icon-rotation 0.5s 1;
+}

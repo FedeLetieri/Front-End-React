@@ -1,0 +1,17 @@
+.home-cards{
+    width: 100%;
+    height: calc(100vh - 8rem);
+}
+
+.home-cards > * {
+    margin: 0 auto;
+    margin-bottom: 3em;
+}
+
+.home-cards__card:nth-child(odd) .cardGrande-icon {
+    color: #765efa;
+}
+
+.home-cards__card:nth-child(even) .cardGrande-icon{
+    color: #64b8f8;
+}

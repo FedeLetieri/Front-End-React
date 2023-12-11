@@ -1,0 +1,52 @@
+@import url('../../assets/css/generic/animations.css');
+@import url('../../assets/css/generic/decorations.css');
+
+.container__cardGrande{
+    display: grid;
+    padding: 0.5rem;
+    border-radius: 1.7em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
+    max-height: 8.5em auto;
+    border: 2px solid black;    
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr auto;
+    font-weight: 800;    
+}
+
+.cardGrande-icon{
+    grid-row: span 2;
+    font-size: 5.5em;
+    color: blue;
+    margin: 0.2em 0 0 0.2em;
+    align-self: auto;
+    
+}
+
+.cardGrande-bottomTitle,.cardGrande-title{
+    color:var(--color-blanco);
+    opacity: 0.8;
+    
+}
+
+.cardGrande-title{
+    font-size: 4em;
+}
+
+.cardGrande-bottomTitle{
+    font-size: 1.2em;
+}   
+
+.pack{
+    overflow: hidden;
+    max-width: 32rem;
+    border: 0.1rem solid var(--color-primario);
+    padding: 0.5rem;
+    cursor: pointer;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-color: var(--color-fondo-primario);
+  }
+

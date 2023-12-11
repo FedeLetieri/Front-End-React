@@ -1,0 +1,45 @@
+.header{
+    position: relative;
+    width: calc(100vw - calc(100vw - 100%));
+    background-image: var(--gradiente);
+    height: 5rem;
+    color: white;
+    justify-content: start !important;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.header__title{
+    margin-bottom: 0 !important;
+    margin-left: 1rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.rectangle{
+    transform: rotate(-45deg);
+    background-color: var(--color-fondo-secundario);
+    position: absolute;
+    z-index: 1;
+}
+
+.rtg-1{
+    aspect-ratio: 1/10;
+    width: 0.5rem;
+    top: -1.5rem;
+    right: 0.7rem;
+}
+
+.rtg-2{
+    width: 0.7rem;
+    top: -2.2rem;
+    right: 2rem;
+    aspect-ratio: 1/10;
+}
+
+.header__icon{
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    margin-left: 1rem;
+}
+

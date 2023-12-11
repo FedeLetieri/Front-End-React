@@ -1,0 +1,155 @@
+@import url(../../assets/css/generic/button.css);
+
+.login-title {
+  color: var(--color-primario);
+  font-weight: bold;
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form__input--subtitle {
+  color: var(--color-primario);
+  font-size: 1.4rem;
+  text-align: start;
+  width: 100%;
+}
+
+.form__input--subtitle_error {
+  color: var(--warning);
+  transition: 0.3s;
+}
+
+.form__input--container {
+  border: none;
+  height: 4em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-top: 0;
+}
+
+.form__input--input {
+  background-color: var(--color-fondo-secundario);
+  color: var(--color-primario);
+  flex: 1;
+  border: 1px solid var(--color-primario);
+  outline: none;
+  padding: 1rem;
+  font-size: 1.3rem !important;
+}
+
+.form__input--input_error {
+  border: 1px solid var(--warning);
+  transition: 0.3s ease;
+}
+
+.form__input--icon {
+  color: var(--color-blanco);
+  border: none;
+  background-color: var(--color-primario);
+  width: 1rem;
+  height: 1rem;
+  padding: 1.5rem;
+}
+
+.form__input--icon_error {
+  background-color: var(--warning);
+  transition: 0.3s ease;
+}
+
+.form__button--login {
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.form__button--login:hover {
+  letter-spacing: 0.25em;
+}
+
+.form__button--login:before {
+  border: 1px solid var(--color-primario);
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-fondo-secundario);
+}
+
+.form__button--login span {
+  color: var(--color-primario);
+  position: relative;
+  z-index: 1;
+}
+
+.form__button--login i::before,
+.form__button--login i::after {
+  background-color: var(--color-fondo-secundario);
+}
+
+@media only screen and (max-width: 500px) {
+  .cut-borders__outer::before,
+  .cut-borders__outer::after {
+    width: 0rem;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: none;
+  }
+
+  .hover-shadow__container::after {
+    left: 0rem;
+    bottom: 0rem;
+    border-top: none;
+  }
+
+  .hover-shadow {
+    border: none;
+  }
+
+  .cut-borders__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.sign-up-sign, .password-forgotten-sign{
+  text-align: center;
+  opacity: 0.95;
+  font-size: 1.3rem;
+}
+
+.password-forgotten-sign {
+  display: block;
+  margin-top: 2.5rem;
+  color: var(--color-primario);
+  margin-bottom: 0 !important;
+}
+
+.sign-up-sign{ margin-top: 0 !important; color: var(--color-primario-oscuro)}
+
+.password-forgotten-sign a, .sign-up-sign a{color: var(--color-primario); text-decoration: underline;}
+
+.section__main_login {
+  flex: 1;
+  height: 100%;
+}
+
+.worldcapp-logo__login {
+  height: 8rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  border: 1px solid var(--color-primario);
+  position: relative;
+  padding: 4rem 5rem;
+  padding-top: 2rem;
+}
+
+.form__text--title {
+  margin-bottom: 1rem;
+}

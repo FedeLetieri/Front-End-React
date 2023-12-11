@@ -1,0 +1,128 @@
+@import url('../../assets/css/generic/animations.css');
+
+.main-wrapper{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 6rem);
+}
+
+.selecciones-table{
+    font-size: 1.5rem;
+    width: 85%;
+    margin: 2rem auto;
+    max-width: 35rem;
+    border-spacing: 1rem;
+    border-collapse: separate;
+    animation: floating 3s infinite;
+    padding-bottom: 13rem;
+}
+
+.selecciones-table td{
+    background-color: var(--color-fondo-primario);
+    cursor: pointer;
+    color: var(--color-primario);
+    padding: 0.7rem 0;
+    border-radius: 0.3rem;
+    border: 0.1rem solid var(--color-primario-oscuro);
+    position: relative;
+    overflow: hidden;
+}
+
+.selecciones-form__wrapper, .selecciones-form__bg{
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.selecciones-form__wrapper{
+    top: -3rem;
+    height: calc(100% + 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selecciones-form__bg{
+    background-color: var(--color-fondo-primario) ;
+    opacity: 0.6;
+    top: 0;
+    height: 100%;
+    z-index: 998;
+}
+
+.selecciones-form{
+    padding: 1rem 0.5rem;
+    position: absolute;
+    width: 85%;
+    margin: auto;
+    background-color: var(--color-fondo-primario);
+    min-height: 43rem;
+    height: fit-content;
+    border-radius: 1rem;
+    border: 0.2rem solid var(--color-primario-oscuro);
+    outline: 0.2rem solid var(--color-primario-oscuro);
+    outline-offset: 0.5rem;
+    z-index: 999;
+}
+
+.selecciones-form h1{
+    color: var(--color-primario);
+    font-size: 2.2rem;
+    margin: 1rem 0 3rem 0;
+}
+
+.form-container__input {
+    width: 90%;
+}
+
+.buttons-container{
+    margin-bottom: 1rem;
+}
+
+.seleccion-icon{
+    position: absolute;
+    left: 1rem;
+    color: var(--color-fondo-primario);
+    font-size: 2rem;
+    height: 2rem;
+    top: -0.5rem;
+    left: 0.2rem;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.seleccion-icon::after{
+    content: "";
+    position: absolute;
+    width: 6rem;
+    height: 6.5rem;
+    z-index: -1;
+    left: -1.2rem;
+    top: -1.5rem;
+    transform: rotate(20deg);
+}
+
+.selecciones-table tr:nth-child(odd) .seleccion-icon::after {
+    background-color: var(--color-primario);
+}
+
+.selecciones-table tr:nth-child(even) .seleccion-icon::after {
+    background-color: var(--color-primario-oscuro);
+}
+
+.seleccion-icon::before{
+    content: "";
+    position: absolute;
+    width: 0.3rem;
+    height: 6.5rem;
+    background-color: var(--color-fondo-primario);
+    z-index: 4;
+    right: -1rem;
+    top: -1.5rem;
+    transform: rotate(20deg);
+}
+
+.seleccion-name{
+    color: var(--color-blanco);
+    letter-spacing: 0.1rem;
+}

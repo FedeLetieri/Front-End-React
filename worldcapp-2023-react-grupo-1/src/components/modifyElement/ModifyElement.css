@@ -1,0 +1,33 @@
+.modify{
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-fondo-primario);
+}
+
+.modify__btn{
+    border: none;
+    color: var(--color-primario);
+    background-color: inherit;
+    position: absolute;
+    right: -12rem;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.modify__options{
+    width: 6rem;
+    padding: 0.2rem;
+    position: fixed;
+    margin: 0 0 0 25rem;
+    z-index: 999;
+    border: 0.1rem solid var(--color-primario);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.7rem;
+    overflow: hidden;
+    background-color: var(--color-fondo-primario);
+}
+
+.modify__options * {background-color: var(--color-fondo-primario) !important;}
+
+.modify__options button { height: fit-content !important;}

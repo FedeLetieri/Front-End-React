@@ -1,0 +1,23 @@
+.cyber-border{
+  border: 0.1rem solid var(--color-primario);
+  border-bottom: 0.6rem solid var(--color-primario);
+}
+
+.search-param{ width: 30rem;}
+
+.search-param__header{
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 0.01rem solid var(--color-primario);
+}
+
+.search-param *{ background-color: var(--color-fondo-primario); }
+
+.search-param .cut-borders__inner{
+  padding: 0 0.8rem;
+  padding-bottom: 1rem;
+}
+
+

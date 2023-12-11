@@ -1,0 +1,91 @@
+:root{
+  --cut-size: -2rem;
+  --border-fts: 0.1rem solid var(--color-primario);
+  --shadow-size: -1rem;
+}
+
+.twinkle{ animation: twinkling-text 1s infinite; }
+
+/* 
+ __________
+|          |
+| RESUMEN: |
+|__________|
+
+Al elemento al que se le quiere cortar los bordes se le agrega la clase cut-borders__container. Dentro del mismo
+se agregan dos elementos que van a hacer de separador (se usaron divs en general), uno dentro del otro,
+el más externo con la clase cut-borders__outer y el más interno cut-borders__inner.
+Este último contiene todos los elementos que estaban dentro de la sección. Es decir que tenemos tres wrappers en total.
+El elemento con la clase cut-borders__outer define las cajas que van a simular cortes dentro del contenedor.
+El elemento con la clase cut-borders__inner define el borde del contenedor y demás propiedades que
+afecten la estructura interna (la externa se mantiene. i.e. margenes) que inicialmente se encontraban
+definidas en cut-borders__container (paddings, display grid/flex, etc).
+*/
+
+.cut-borders__container{
+  overflow: hidden; /*para que las cajas que simulan los cortes no sobresalgan del contenedor  y afecten la estructura*/
+  position: relative; /*para poder usar el contenedor como eje para posicionar las cajas en las esquinas*/
+  height: fit-content; /*para que la altura del contenedor se adapte al contenido*/
+}
+
+/* .cut-borders__inside,
+.cut-borders__outside {
+  /* height: 100%; 
+} */
+
+/*Define las cajas a utilizar para simular los cortes*/
+.cut-borders__outer::before,
+.cut-borders__outer::after{
+  content: "";
+  position: absolute; /*para poder mover las cajas en relación a .cut-borders__outer*/
+  width: 4rem; /*tamaño arbitrario que funciona para todos los contenedores*/
+  aspect-ratio: 1/1; /*hace que la caja sea cuadrada*/
+  background-color: var(--color-fondo-secundario);
+  transform: rotate(45deg); /*rota la caja para tapar el borde*/
+  z-index: 1; /*superpone las cajas encima de los elementos posicionados para evitar bordes innecesarios que aparecen desde ciertos viewports*/
+}
+
+/*Mueve una caja hacia la esquina superior derecha de .cut-borders__outer y setea el borde que va a ser visible*/
+.cut-borders__outer::before{
+  right: var(--cut-size);
+  top: var(--cut-size);
+  border-bottom: var(--border-fts);
+}
+
+/*Ídem anterior, para la esquina inferior izquierda*/
+.cut-borders__outer::after{
+  left: var(--cut-size);
+  bottom: var(--cut-size);
+  border-top: var(--border-fts);
+}
+
+/*Opcionalmente se puede definir una sombra a al contenedor con bordes cortados usando las siguientes propiedades:
+.hover-shadow__container para el .cut-borders__container
+.hover-shadow para .cut-borders__outer
+*/
+
+.hover-shadow__container{
+  padding: 1rem; /*para que se visualice la sombra (la posee el contenedor hijo y no se visualiza de no haber una separación)*/
+  pointer-events: none; /*se desactiva porque al haber un padding interno ciertos eventos de hover se activan antes de tocar el elemento contenedor de la sombra*/
+}
+
+.hover-shadow{ pointer-events: auto; /*Se activa para que reaccione a eventos (en este caso hover)*/ }
+
+/*Se setean las sombras de cada elemento (inset a las cajas para simular que salen del contenedor)*/
+.hover-shadow:hover{ box-shadow: 0 0 0.8rem 0.1rem var(--color-primario); }
+
+.hover-shadow__container:hover::after{ box-shadow: 0 0.8rem 0.8rem -0.7rem var(--color-primario) inset; }
+
+.hover-shadow__container:hover::before{ box-shadow: 0 -0.8rem 0.8rem -0.7rem var(--color-primario) inset;}
+
+/*Se reposiciona la caja superior en relación al padding del elemento padre para que no sobresalga*/
+.hover-shadow__container::before{
+  right: var(--shadow-size);
+  top: var(--shadow-size);
+}
+
+/*Ídem anterior, para la caja inferior*/
+.hover-shadow__container::after{
+  left: var(--shadow-size);
+  bottom: var(--shadow-size);
+}
